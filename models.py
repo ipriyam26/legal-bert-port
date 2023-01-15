@@ -120,7 +120,7 @@ class AttentionPooling(torch.nn.Module):
 class BertTokenEmbedder(torch.nn.Module):
     def __init__(self, config):
         super(BertTokenEmbedder, self).__init__()
-        self.bert = BertModel.from_pretrained(config["bert_model"])
+        self.bert = BertModel.from_pretrained('pile-of-law/legalbert-large-1.7M-1')
         # state_dict_1 = self.bert.state_dict()
         # state_dict_2 = torch.load('/home/astha_agarwal/model/pytorch_model.bin')
         # for name2 in state_dict_2.keys():
